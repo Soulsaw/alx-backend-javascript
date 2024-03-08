@@ -6,3 +6,4 @@
 ## 2. A Course, Getters, and Setters
 [Task 2](./2-hbtn_course.js)
 ## 3. Methods, static methods, computed methods names..... MONEY
+## 5. A Building
