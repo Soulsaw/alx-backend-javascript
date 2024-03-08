@@ -4,15 +4,15 @@ export default class Building {
     this.evacuationWarningMessage();
   }
 
-  get sqrt() {
+  get sqft() {
     return this._sqft;
   }
 
-  set sqrt(sqft) {
+  set sqft(sqft) {
     if (typeof (sqft) === 'number') {
       this._sqft = sqft;
     } else {
-      throw new TypeError('sqrt must be a number');
+      throw new TypeError('sqft must be a number');
     }
   }
 
