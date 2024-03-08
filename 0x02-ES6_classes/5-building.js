@@ -1,15 +1,15 @@
 export default class Building {
-  constructor(sqrt) {
-    this.sqrt = sqrt;
+  constructor(sqft) {
+    this.sqft = sqft;
   }
 
   get sqrt() {
-    return this._sqrt;
+    return this._sqft;
   }
 
-  set sqrt(sqrt) {
-    if (typeof (sqrt) === 'number') {
-      this._sqrt = sqrt;
+  set sqrt(sqft) {
+    if (typeof (sqft) === 'number') {
+      this._sqft = sqft;
     } else {
       throw new TypeError('sqrt must be a number');
     }
