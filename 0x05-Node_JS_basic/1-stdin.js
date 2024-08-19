@@ -1,4 +1,4 @@
-const process = require("process");
+const process = require("node:process");
 const displayMessage = require("./0-console");
 
 displayMessage("Welcome to Holberton School, what is your name?");
