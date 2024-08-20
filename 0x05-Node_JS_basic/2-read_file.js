@@ -37,7 +37,7 @@ function countStudents (path) {
         ].join(', ')}`
       );
     }
-  } catch {
+  } catch (error) {
     throw new Error('Cannot load the database');
   }
 }
