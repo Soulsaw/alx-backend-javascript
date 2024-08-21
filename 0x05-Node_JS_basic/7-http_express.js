@@ -8,13 +8,12 @@ app.get('/', (req, res) => {
 });
 
 app.get('/students', (req, res) => {
-  res.write('This is the list of our students\n');
   countStudents(process.argv[2].toString())
     .then((output) => {
-      res.send(output.slice(0, -1));
+      res.send(['This is the list of our students', output].join('\n'));
     })
     .catch(() => {
-      res.send('Cannot load the database');
+      res.send('his is the list of our students\nCannot load the database');
     });
 });
 
