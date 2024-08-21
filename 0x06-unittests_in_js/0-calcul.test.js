@@ -12,6 +12,12 @@ describe('calculateNumber', () => {
     assert.equal(calculateNumber(1.2, 3.7), 5);
   });
   it('...', () => {
-    assert.equal(calculateNumber(1.5, 3.7), 6);
+    assert.equal(calculateNumber(1.5, -3.7), -2);
+  });
+  it('...', () => {
+    assert.equal(calculateNumber(-1.5, 3.7), 2);
+  });
+  it('...', () => {
+    assert.equal(calculateNumber(-1.5, -3.7), -6);
   });
 });
