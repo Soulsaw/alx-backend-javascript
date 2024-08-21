@@ -1,5 +1,5 @@
-const assert = require('assert');
-const calculateNumber = require('./1-calcul');
+import { assert } from 'chai';
+import calculateNumber from './1-calcul.js';
 
 describe('culculateNumber', () => {
   describe('#SUM', () => {
