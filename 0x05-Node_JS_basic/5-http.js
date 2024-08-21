@@ -22,3 +22,5 @@ const app = http.createServer(async (req, res) => {
 app.listen(port, '127.0.0.1', () => {
   console.log('...');
 });
+
+module.exports = app;
