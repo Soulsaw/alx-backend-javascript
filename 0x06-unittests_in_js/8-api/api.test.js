@@ -13,4 +13,8 @@ describe('Test the api', () => {
             expect(res.body).to.be.equal('Welcome to the payment system');
         });
     });
+    it("#Other", () => {
+        request.get('http://localhost:7865', (err, res, body) => {
+        });
+    });
 });
