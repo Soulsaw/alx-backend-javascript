@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-function countStudents (path) {
+function countStudents(path) {
   try {
     const data = fs.readFileSync(path, 'utf8');
 
@@ -18,12 +18,12 @@ function countStudents (path) {
 
     students.forEach(([firstName, , , field]) => {
       if (field && firstName) {
-        totalStudents++;
+        totalStudents += 1;
         if (!fieldCounts[field]) {
           fieldCounts[field] = 0;
           fieldLists[field] = [];
         }
-        fieldCounts[field]++;
+        fieldCounts[field] += 1;
         fieldLists[field].push(firstName);
       }
     });
@@ -31,11 +31,7 @@ function countStudents (path) {
     console.log(`Number of students: ${totalStudents}`);
 
     for (const [field, count] of Object.entries(fieldCounts)) {
-      console.log(
-        `Number of students in ${field}: ${count}. List: ${fieldLists[
-          field
-        ].join(', ')}`
-      );
+      console.log(`Number of students in ${field}: ${count}. List: ${fieldLists[field].join(', ')}`);
     }
   } catch (error) {
     throw new Error('Cannot load the database');
