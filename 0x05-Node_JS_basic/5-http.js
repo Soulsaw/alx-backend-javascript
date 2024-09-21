@@ -8,14 +8,14 @@ const app = http.createServer(async (req, res) => {
   res.setHeader('Content-Type', 'text/plain');
   if (req.method === 'GET') {
     if (req.url === '/') {
-      res.end('Hello Holberton School!\n');
+      return res.end('Hello Holberton School!\n');
     } else if (req.url === '/students') {
       res.write('This is the list of our students\n');
       countStudents(process.argv[2].toString()).then((output) => {
-        res.end(output.slice(0, -1));
+        return res.end(output.slice(0, -1));
       }).catch(() => {
         res.statusCode = 404;
-        res.end('Cannot load the database');
+        return res.end('Cannot load the database');
       });
     }
   }
